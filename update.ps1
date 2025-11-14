@@ -3,17 +3,17 @@
 # Where to temporarily download the files
 $src = "$env:USERPROFILE\Downloads\BO7-Files"
 
-# The Call of Duty Players folder (hidden on Windows but still accessible)
+# The Call of Duty Players folder (hidden but accessible)
 $dst = "$env:LOCALAPPDATA\Activision\Call of Duty\players"
 
 # Make sure the temporary folder exists
 New-Item -ItemType Directory -Force -Path $src | Out-Null
 
-# List of files to download
+# List of files to download (RAW links!)
 $files = @(
-    @{ url = "https://github.com/xijammy/MFGBO7CONFIGS/blob/main/s.1.0.cod25.m"; name = "s.1.0.cod25.m" }
-    @{ url = "https://github.com/xijammy/MFGBO7CONFIGS/blob/main/s.1.0.cod25.txt0"; name = "s.1.0.cod25.txt0" }
-    @{ url = "https://github.com/xijammy/MFGBO7CONFIGS/blob/main/s.1.0.cod25.txt1"; name = "s.1.0.cod25.txt1" }
+    @{ url = "https://raw.githubusercontent.com/xijammy/MFGBO7CONFIGS/main/s.1.0.cod25.m"; name = "s.1.0.cod25.m" }
+    @{ url = "https://raw.githubusercontent.com/xijammy/MFGBO7CONFIGS/main/s.1.0.cod25.txt0"; name = "s.1.0.cod25.txt0" }
+    @{ url = "https://raw.githubusercontent.com/xijammy/MFGBO7CONFIGS/main/s.1.0.cod25.txt1"; name = "s.1.0.cod25.txt1" }
 )
 
 # Download each file
